@@ -63,15 +63,15 @@
 .agb__rules {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 18px;
-  margin-top: 48px;
+  gap: 24px;
+  margin-top: 64px;
 }
 
 .agb__rule {
   background: #fff;
   border: 1px solid var(--border);
   border-radius: 12px;
-  padding: 20px 22px;
+  padding: 26px 28px;
 }
 
 .agb__rule-k {
@@ -83,22 +83,22 @@
 }
 
 .agb__rule-t {
-  font: 600 15px var(--font-sans);
-  margin-bottom: 4px;
+  font: 600 16px var(--font-sans);
+  margin-bottom: 6px;
 }
 
 .agb__rule-d {
-  font-size: 13.5px;
+  font-size: 14.5px;
   color: var(--neutral-600);
-  line-height: 1.5;
+  line-height: 1.55;
 }
 
 .agb__calview {
   display: grid;
   grid-template-columns: 1fr 1.05fr;
-  gap: 48px;
+  gap: 72px;
   align-items: start;
-  margin-top: 80px;
+  margin-top: 112px;
 }
 
 .agb__calview h2 {
@@ -118,8 +118,8 @@
 }
 
 .agb__calview p {
-  font-size: 15px;
-  line-height: 1.6;
+  font-size: 16px;
+  line-height: 1.65;
   color: var(--ink-3);
 }
 
@@ -128,7 +128,7 @@
   border: 1px solid var(--border);
   border-radius: 14px;
   box-shadow: var(--shadow-lg);
-  padding: 24px;
+  padding: 32px;
 }
 
 .agb__dayview-h {
@@ -219,7 +219,7 @@
 }
 
 .agb__brief {
-  margin-top: 80px;
+  margin-top: 112px;
 }
 
 .agb__brief h2 {
@@ -239,19 +239,19 @@
 }
 
 .agb__brief-card {
-  margin-top: 32px;
+  margin-top: 40px;
   background: #fff;
   border: 1px solid var(--border);
   border-radius: 14px;
-  padding: 28px;
+  padding: 36px;
   box-shadow: var(--shadow-lg);
 }
 
 .agb__brief-row {
   display: grid;
-  grid-template-columns: 140px 1fr;
-  gap: 18px;
-  padding: 14px 0;
+  grid-template-columns: 160px 1fr;
+  gap: 22px;
+  padding: 18px 0;
   border-top: 1px dashed var(--border);
 }
 
@@ -268,9 +268,9 @@
 }
 
 .agb__brief-v {
-  font-size: 14.5px;
+  font-size: 15.5px;
   color: var(--ink-3);
-  line-height: 1.55;
+  line-height: 1.6;
 }
 
 @media (max-width: 880px) {

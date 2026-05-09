@@ -63,15 +63,15 @@
 .adm__steps {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-  margin-top: 60px;
+  gap: 32px;
+  margin-top: 80px;
 }
 
 .adm__step {
   background: #fff;
   border: 1px solid var(--border);
   border-radius: 14px;
-  padding: 26px 24px;
+  padding: 32px 30px;
   position: relative;
 }
 
@@ -85,15 +85,15 @@
 .adm__step h3 {
   font-family: var(--font-serif);
   font-style: italic;
-  font-size: 24px;
+  font-size: 26px;
   line-height: 1.2;
-  margin: 10px 0 12px;
+  margin: 14px 0 14px;
   color: var(--ink);
   letter-spacing: -0.01em;
 }
 
 .adm__step p {
-  font-size: 14.5px;
+  font-size: 15px;
   color: var(--neutral-600);
   line-height: 1.6;
 }
@@ -101,9 +101,9 @@
 .adm__thread {
   display: grid;
   grid-template-columns: 1.05fr 0.95fr;
-  gap: 48px;
+  gap: 72px;
   align-items: start;
-  margin-top: 80px;
+  margin-top: 112px;
 }
 
 .adm__thread-copy h2 {
@@ -152,12 +152,12 @@
   background: #fff;
   border: 1px solid var(--border);
   border-radius: 14px;
-  padding: 24px;
+  padding: 32px;
   box-shadow: var(--shadow-lg);
 }
 
 .adm__tdmail {
-  padding-bottom: 18px;
+  padding-bottom: 22px;
   border-bottom: 1px dashed var(--border);
 }
 
@@ -197,17 +197,17 @@
 }
 
 .adm__tdactions {
-  margin-top: 18px;
+  margin-top: 22px;
   display: flex;
   flex-direction: column;
-  gap: 9px;
+  gap: 11px;
 }
 
 .adm__tda {
   display: flex;
   align-items: center;
-  gap: 12px;
-  padding: 12px 14px;
+  gap: 14px;
+  padding: 14px 16px;
   background: var(--paper-2);
   border: 1px solid var(--border-soft);
   border-radius: 10px;

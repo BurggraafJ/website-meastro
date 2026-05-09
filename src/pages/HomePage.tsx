@@ -29,6 +29,13 @@ const TOTAL = 9
 
 const SPLASH_KEY = 'maestro_splash_v1'
 
+/**
+ * Slow the demo by 25% — adds roughly 10 seconds to the ~40s base sequence.
+ * Multiplies every setTimeout delay (waits and per-character typewriter speed),
+ * so the visual rhythm stays the same but everything breathes longer.
+ */
+const DEMO_SPEED = 1.25
+
 export function HomePage() {
   useDocumentTitle('Maestro · Eén agent voor je hele werkplek')
 
@@ -113,7 +120,7 @@ export function HomePage() {
   }, [])
 
   const at = useCallback((ms: number, fn: () => void) => {
-    const id = window.setTimeout(fn, ms)
+    const id = window.setTimeout(fn, ms * DEMO_SPEED)
     timersRef.current.push(id)
   }, [])
 
@@ -128,7 +135,7 @@ export function HomePage() {
         if (i <= str.length) {
           target.textContent = str.slice(0, i)
           i++
-          const id = window.setTimeout(tick, speed)
+          const id = window.setTimeout(tick, speed * DEMO_SPEED)
           timersRef.current.push(id)
         } else {
           done?.()
@@ -149,7 +156,7 @@ export function HomePage() {
         const current = target.textContent ?? ''
         if (current.length > 0) {
           target.textContent = current.slice(0, -1)
-          const id = window.setTimeout(tick, speed)
+          const id = window.setTimeout(tick, speed * DEMO_SPEED)
           timersRef.current.push(id)
         } else {
           done?.()

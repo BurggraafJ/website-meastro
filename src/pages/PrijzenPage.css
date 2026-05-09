@@ -7,7 +7,7 @@
   overflow: hidden;
   border-bottom: 1px solid var(--border);
   background: var(--paper-3);
-  padding: 64px 0 48px;
+  padding: 96px 0 72px;
 }
 
 .pr-head__bg {
@@ -23,21 +23,21 @@
 
 .pr-head__inner {
   position: relative;
-  max-width: 880px;
+  max-width: 920px;
 }
 
 .pr-head__inner h1 {
-  margin-bottom: 18px;
+  margin-bottom: 24px;
 }
 
 .pr-section {
-  padding: 48px 0 88px;
+  padding: 64px 0 120px;
 }
 
 .ea {
   display: grid;
   grid-template-columns: 1fr 1.4fr;
-  gap: 48px;
+  gap: 64px;
   align-items: start;
 }
 
@@ -55,10 +55,10 @@
 
 .ea__side h2 {
   font-family: var(--font-serif);
-  font-size: 32px;
+  font-size: 36px;
   line-height: 1.08;
   letter-spacing: -0.018em;
-  margin-bottom: 14px;
+  margin-bottom: 18px;
 }
 
 .ea__side h2 em {
@@ -67,10 +67,10 @@
 }
 
 .ea__side p {
-  font-size: 14.5px;
+  font-size: 15.5px;
   color: var(--neutral-600);
   line-height: 1.6;
-  margin: 0 0 22px;
+  margin: 0 0 28px;
 }
 
 .ea__list {
@@ -79,15 +79,15 @@
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 14px;
 }
 
 .ea__list li {
   display: flex;
-  gap: 11px;
-  font-size: 14px;
+  gap: 12px;
+  font-size: 15px;
   color: var(--neutral-700);
-  line-height: 1.5;
+  line-height: 1.55;
 }
 
 .ea__list li svg {
@@ -99,10 +99,10 @@
 }
 
 .ea__pills {
-  margin-top: 22px;
+  margin-top: 28px;
   display: flex;
   flex-wrap: wrap;
-  gap: 7px;
+  gap: 8px;
 }
 
 .ea__pills span {
@@ -121,8 +121,13 @@
   background: #fff;
   border: 1px solid var(--border);
   border-radius: 18px;
-  padding: 32px;
+  padding: 40px;
   box-shadow: var(--shadow-lg);
+}
+@media (max-width: 560px) {
+  .ea__card {
+    padding: 28px 22px;
+  }
 }
 
 .ea__cardhead {
@@ -154,7 +159,7 @@
 
 .ea__cardtitle {
   font-family: var(--font-serif);
-  font-size: 26px;
+  font-size: 30px;
   line-height: 1.1;
   letter-spacing: -0.018em;
 }
@@ -165,16 +170,17 @@
 }
 
 .ea__cardsub {
-  font-size: 13.5px;
+  font-size: 14.5px;
   color: var(--neutral-600);
-  margin: 6px 0 22px;
+  margin: 8px 0 28px;
+  line-height: 1.55;
 }
 
 .fld {
   display: flex;
   flex-direction: column;
-  gap: 6px;
-  margin-bottom: 14px;
+  gap: 7px;
+  margin-bottom: 18px;
 }
 
 .fld--row {
@@ -204,12 +210,12 @@
 .fld select,
 .fld textarea {
   width: 100%;
-  height: 44px;
-  padding: 0 14px;
+  height: 48px;
+  padding: 0 16px;
   border: 1px solid var(--border);
-  border-radius: 9px;
+  border-radius: 10px;
   background: #fff;
-  font: 500 14.5px var(--font-sans);
+  font: 500 15px var(--font-sans);
   color: var(--ink);
   transition: border-color 0.12s, box-shadow 0.12s;
   outline: 0;
@@ -217,10 +223,10 @@
 
 .fld textarea {
   height: auto;
-  padding: 12px 14px;
-  min-height: 96px;
+  padding: 14px 16px;
+  min-height: 112px;
   resize: vertical;
-  line-height: 1.5;
+  line-height: 1.55;
 }
 
 .fld input:focus,
@@ -242,7 +248,7 @@
 .opts {
   display: flex;
   flex-wrap: wrap;
-  gap: 7px;
+  gap: 8px;
 }
 
 .opts label {
@@ -259,11 +265,11 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  font: 500 12.5px var(--font-sans);
+  font: 500 13.5px var(--font-sans);
   color: var(--neutral-700);
   background: #fff;
   border: 1px solid var(--border);
-  padding: 8px 13px;
+  padding: 10px 15px;
   border-radius: 9999px;
   transition: all 0.12s;
 }
@@ -283,11 +289,11 @@
 .consent {
   display: flex;
   align-items: flex-start;
-  gap: 10px;
-  margin: 18px 0 22px;
-  font-size: 13px;
+  gap: 12px;
+  margin: 24px 0 28px;
+  font-size: 14px;
   color: var(--neutral-600);
-  line-height: 1.5;
+  line-height: 1.55;
 }
 
 .consent input {
@@ -306,8 +312,8 @@
 
 .submit {
   width: 100%;
-  height: 50px;
-  font-size: 15px;
+  height: 56px;
+  font-size: 15.5px;
 }
 
 .foot-note {
@@ -358,15 +364,15 @@
 }
 
 .faq {
-  margin-top: 80px;
+  margin-top: 112px;
 }
 
 .faq h2 {
   font-family: var(--font-serif);
-  font-size: 36px;
+  font-size: 40px;
   line-height: 1.08;
   letter-spacing: -0.018em;
-  margin-bottom: 24px;
+  margin-bottom: 32px;
 }
 
 .faq h2 em {
@@ -377,7 +383,7 @@
 .faq__grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 14px;
+  gap: 18px;
 }
 
 @media (max-width: 880px) {
@@ -390,17 +396,17 @@
   background: #fff;
   border: 1px solid var(--border);
   border-radius: 13px;
-  padding: 20px 22px;
+  padding: 26px 28px;
 }
 
 .faq__item h3 {
-  font: 600 15px var(--font-sans);
-  margin-bottom: 6px;
+  font: 600 16px var(--font-sans);
+  margin-bottom: 8px;
 }
 
 .faq__item p {
-  font-size: 14px;
+  font-size: 14.5px;
   color: var(--neutral-600);
-  line-height: 1.55;
+  line-height: 1.6;
   margin: 0;
 }

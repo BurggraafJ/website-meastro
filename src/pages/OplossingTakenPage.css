@@ -63,8 +63,8 @@
 .tkn__compare {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 24px;
-  margin-top: 60px;
+  gap: 32px;
+  margin-top: 80px;
   align-items: start;
 }
 
@@ -72,7 +72,7 @@
   background: #fff;
   border: 1px solid var(--border);
   border-radius: 14px;
-  padding: 24px;
+  padding: 32px;
 }
 
 .tkn__col-bad {
@@ -95,9 +95,9 @@
 .tkn__col h3 {
   font-family: var(--font-serif);
   font-style: italic;
-  font-size: 24px;
+  font-size: 26px;
   line-height: 1.2;
-  margin: 0 0 18px;
+  margin: 0 0 22px;
   color: var(--ink);
   letter-spacing: -0.01em;
 }
@@ -105,12 +105,12 @@
 .tkn__todo {
   display: flex;
   align-items: flex-start;
-  gap: 11px;
-  padding: 11px 12px;
+  gap: 12px;
+  padding: 14px 14px;
   border-bottom: 1px dashed var(--border-soft);
-  font-size: 13.5px;
+  font-size: 14.5px;
   color: var(--ink-3);
-  line-height: 1.45;
+  line-height: 1.5;
 }
 
 .tkn__todo:last-child {
@@ -182,12 +182,12 @@
 .tkn__recat {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
-  margin-top: 60px;
+  gap: 24px;
+  margin-top: 80px;
 }
 
 .tkn__cat {
-  padding: 22px 22px;
+  padding: 28px 28px;
   background: #fff;
   border: 1px solid var(--border);
   border-radius: 13px;
@@ -218,22 +218,22 @@
 }
 
 .tkn__cat-t {
-  font: 600 15px var(--font-sans);
-  margin-bottom: 6px;
+  font: 600 16px var(--font-sans);
+  margin-bottom: 8px;
 }
 
 .tkn__cat-d {
-  font-size: 13.5px;
+  font-size: 14.5px;
   color: var(--neutral-600);
-  line-height: 1.55;
+  line-height: 1.6;
 }
 
 .tkn__auto {
-  margin-top: 80px;
+  margin-top: 112px;
   background: var(--ink);
   color: #fff;
   border-radius: 18px;
-  padding: 48px 44px;
+  padding: 64px 56px;
 }
 
 .tkn__auto h2 {
@@ -260,17 +260,17 @@
 }
 
 .tkn__auto-list {
-  margin-top: 28px;
+  margin-top: 36px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 12px;
 }
 
 .tkn__auto-row {
   display: flex;
   align-items: center;
-  gap: 14px;
-  padding: 12px 16px;
+  gap: 16px;
+  padding: 16px 20px;
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 10px;
