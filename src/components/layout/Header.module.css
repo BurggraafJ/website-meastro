@@ -1,17 +1,212 @@
-.header {
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(245, 244, 240, 0.78);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.25s, background 0.25s;
+}
+
+.isStuck {
+  border-color: var(--border);
+  background: rgba(245, 244, 240, 0.92);
+}
+
+.inner {
   display: flex;
   align-items: center;
-  padding: 0.75rem 1.25rem;
-  border-bottom: 1px solid var(--border);
+  justify-content: space-between;
+  height: 68px;
 }
 
-.brand {
-  font-weight: 600;
-  font-size: 1rem;
-  color: inherit;
+.links {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+@media (max-width: 880px) {
+  .links {
+    display: none;
+  }
+}
+
+.link {
+  font: 500 14px var(--font-sans);
+  color: var(--neutral-700);
+  padding: 8px 12px;
+  border-radius: 7px;
+  transition: color 0.12s, background 0.12s;
   text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  background: none;
+  border: 0;
 }
 
-.brand:hover {
-  text-decoration: underline;
+.link:hover {
+  color: var(--ink);
+  background: rgba(0, 0, 0, 0.04);
+}
+
+.isActive {
+  color: var(--orange-deep);
+  background: var(--orange-subtle);
+}
+
+.linkBtn {
+  font-family: inherit;
+}
+
+.cta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 40px;
+  padding: 0 16px;
+  border-radius: 9px;
+  border: 1px solid var(--border);
+  background: #fff;
+  color: var(--ink);
+  font: 600 13.5px var(--font-sans);
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.btn:hover {
+  background: var(--paper-2);
+  border-color: var(--border-strong);
+}
+
+.btnGhost {
+  border-color: transparent;
+  background: transparent;
+}
+
+.btnGhost:hover {
+  background: rgba(0, 0, 0, 0.04);
+}
+
+.btnPrimary {
+  background: var(--ink);
+  color: #fff;
+  border-color: var(--ink);
+}
+
+.btnPrimary:hover {
+  background: #000;
+  border-color: #000;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px -2px rgba(15, 15, 15, 0.18);
+}
+
+.btn svg {
+  width: 14px;
+  height: 14px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* dropdown */
+.drop {
+  position: relative;
+}
+
+.drop::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  height: 14px;
+}
+
+.menu {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%) translateY(-6px);
+  min-width: 340px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  box-shadow: 0 16px 40px -8px rgba(15, 15, 15, 0.12),
+    0 6px 18px -6px rgba(15, 15, 15, 0.08);
+  padding: 8px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.18s, transform 0.18s, visibility 0s linear 0.18s;
+  visibility: hidden;
+}
+
+.drop:hover .menu,
+.drop:focus-within .menu {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0);
+  visibility: visible;
+  transition: opacity 0.18s, transform 0.18s;
+}
+
+.menuItem {
+  display: flex;
+  gap: 12px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: var(--ink);
+  align-items: flex-start;
+  transition: background 0.15s;
+}
+
+.menuItem:hover {
+  background: var(--orange-subtle);
+}
+
+.menuIcon {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: var(--orange-subtle);
+  color: var(--orange-deep);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.menuIcon svg {
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.menuTitle {
+  display: block;
+  font: 600 14px var(--font-sans);
+  margin-bottom: 2px;
+}
+
+.menuDesc {
+  display: block;
+  font: 500 12.5px var(--font-sans);
+  color: var(--neutral-500);
+  line-height: 1.4;
 }

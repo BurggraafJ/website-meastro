@@ -1,73 +1,64 @@
-# React + TypeScript + Vite
+# Maestro — marketing site
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Marketing site voor [Maestro](https://maestro.example) — één agent voor je hele werkplek. Vite + React 19 + TypeScript, klaar om te deployen op Vercel.
 
-Currently, two official plugins are available:
+## Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Vite 8** + **React 19** + **TypeScript ~6**
+- **React Router 7** voor client-side routing
+- **CSS** via globale tokens in `src/index.css` + per-pagina CSS-bestanden
+- Path-alias `@` → `src` (zie `vite.config.ts`)
 
-## React Compiler
+## Lokaal draaien
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install     # eerste keer of na dependency-changes
+npm run dev     # dev-server op http://localhost:5173
+npm run build   # tsc -b && vite build → dist/
+npm run preview # bekijk de prod-build lokaal
+npm run lint    # eslint
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Routes
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+| Path | Pagina |
+|---|---|
+| `/` | Home (splash + hero + features + demo + story + CTA) |
+| `/mail-automatisering` | Mail-automatisering oplossing |
+| `/oplossingen/administratie` | Administratie oplossing |
+| `/oplossingen/agenda-beheer` | Agenda-beheer oplossing |
+| `/oplossingen/taken` | Taken oplossing |
+| `/koppelingen` | MCP-connectors (live / soon / op aanvraag) |
+| `/prijzen` | Early-access aanmeldformulier |
+| `*` | 404 |
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Mappenstructuur
+
 ```
+src/
+  app/           # router + providers
+  components/
+    layout/      # Header, Footer (3 varianten), MainLayout, BrandMark
+  hooks/
+  lib/
+    paths.ts     # alle route-constanten
+  pages/         # één .tsx + één .css per pagina
+  index.css      # design tokens + globale utilities
+  main.tsx
+public/
+  favicon.svg    # Maestro mark
+index.html       # NL lang, Google Fonts preconnect
+vercel.json      # SPA-rewrites naar /index.html
+```
+
+## Deploy
+
+Push naar `main` → Vercel build automatisch (`npm run build` → `dist/`). De SPA-rewrite in `vercel.json` zorgt dat client-side routes (`/prijzen`, `/oplossingen/*`) een fresh page-load overleven.
+
+## Design-tokens
+
+Alle kleuren, fonts, spacing en shadows leven in `src/index.css` als CSS custom properties. Pagina's stylen via `var(--orange)` etc., niet via hardcoded hex.
+
+## Skills
+
+Een Claude Code skill `website-manager` (`~/.claude/skills/website-manager/SKILL.md`) bevat het complete handboek voor onderhoud — pagina toevoegen, scoping-conventie, deploy-flow, footer-varianten.
