@@ -93,16 +93,16 @@
   display: grid;
   grid-template-columns: 1.05fr 0.95fr;
   gap: 80px;
-  padding-top: 480px;
-  padding-bottom: 560px;
+  padding-top: 720px;
+  padding-bottom: 800px;
   align-items: center;
 }
 @media (max-width: 980px) {
   .hero__inner {
     grid-template-columns: 1fr;
     gap: 56px;
-    padding-top: 300px;
-    padding-bottom: 360px;
+    padding-top: 440px;
+    padding-bottom: 520px;
   }
 }
 .hero__copy h1 {
@@ -971,7 +971,7 @@
   background: linear-gradient(90deg, #dc6f3f, #ff8a4c);
 }
 .splash.is-running .splash__bar span {
-  animation: barFill 6s linear forwards;
+  animation: barFill 5s linear forwards;
 }
 @keyframes barFill {
   to {

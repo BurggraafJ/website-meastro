@@ -27,8 +27,6 @@ const STEP_LABELS = [
 
 const TOTAL = 9
 
-const SPLASH_KEY = 'maestro_splash_v1'
-
 /**
  * Slow the demo by 25% — adds roughly 10 seconds to the ~40s base sequence.
  * Multiplies every setTimeout delay (waits and per-character typewriter speed),
@@ -45,21 +43,11 @@ export function HomePage() {
   const splashRef = useRef<HTMLDivElement>(null)
   const [splashVisible, setSplashVisible] = useState(false)
 
-  const runSplash = useCallback((force: boolean) => {
+  const runSplash = useCallback((_force: boolean) => {
     const el = splashRef.current
     if (!el) return
 
-    let seen = false
-    try {
-      seen = sessionStorage.getItem(SPLASH_KEY) === '1'
-    } catch {
-      /* sessionStorage unavailable */
-    }
-    if (seen && !force) {
-      setSplashVisible(false)
-      return
-    }
-
+    /* Replay the splash on every load — no sessionStorage check. */
     setSplashVisible(true)
     document.documentElement.style.overflow = 'hidden'
     el.classList.remove('is-leaving')
@@ -73,13 +61,8 @@ export function HomePage() {
         setSplashVisible(false)
         el.classList.remove('is-running', 'is-leaving')
         document.documentElement.style.overflow = ''
-        try {
-          sessionStorage.setItem(SPLASH_KEY, '1')
-        } catch {
-          /* ignore */
-        }
-      }, 700)
-    }, 6000)
+      }, 600)
+    }, 5000)
 
     return () => window.clearTimeout(hide)
   }, [])
