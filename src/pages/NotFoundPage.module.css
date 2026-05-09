@@ -1,0 +1,25 @@
+.wrap {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.code {
+  margin: 0 0 0.5rem;
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+}
+
+.text {
+  margin: 0 0 1.25rem;
+  color: var(--text);
+}
+
+.link {
+  font-weight: 500;
+  color: var(--accent);
+}
+
+.link:hover {
+  text-decoration: underline;
+}
