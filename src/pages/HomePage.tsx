@@ -331,13 +331,9 @@ export function HomePage() {
         </div>
       </div>
 
-      {/* HERO — empty spacer blocks above and below for breathing room */}
-      <div className="hero-spacer hero-spacer--top" aria-hidden="true" />
-
-      <section className="hero" id="top">
-        <div className="hero__bg" />
-        <div className="hero__grid" />
-
+      {/* HERO ZONE — top spacer + hero + bottom spacer share one wrapper so the
+          side rails and the bottom border run continuously across all three. */}
+      <section className="hero-zone">
         <div className="rail rail--l">
           <span className="rail__chip">
             <strong>134</strong>&nbsp;voorstellen vandaag
@@ -360,6 +356,12 @@ export function HomePage() {
             early access · plek <strong>38</strong>&nbsp;/ 100
           </span>
         </div>
+
+        <div className="hero-spacer hero-spacer--top" aria-hidden="true" />
+
+        <section className="hero" id="top">
+          <div className="hero__bg" />
+          <div className="hero__grid" />
 
         <div className="wrap hero__inner">
           <div className="hero__copy">
@@ -505,9 +507,10 @@ export function HomePage() {
             </span>
           </div>
         </div>
-      </section>
+        </section>
 
-      <div className="hero-spacer hero-spacer--bottom" aria-hidden="true" />
+        <div className="hero-spacer hero-spacer--bottom" aria-hidden="true" />
+      </section>
 
       {/* STRIP */}
       <section className="strip">

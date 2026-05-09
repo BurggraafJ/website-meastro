@@ -8,17 +8,17 @@
    under `.ma-page` so the two never collide.
    ========================================================================== */
 
-/* ----- HERO spacer blocks (deliberate empty whitespace zones) ----- */
-.hero-spacer {
+/* ----- HERO zone (wraps top spacer + hero + bottom spacer) ----- */
+.hero-zone {
+  position: relative;
   background: var(--paper-3);
-  height: 160px;
-}
-.hero-spacer--top {
-  border-bottom: 1px solid transparent;
-}
-.hero-spacer--bottom {
-  border-top: 1px solid transparent;
   border-bottom: 1px solid var(--border);
+  overflow: hidden;
+}
+
+/* Empty spacer blocks above and below the hero for breathing room. */
+.hero-spacer {
+  height: 160px;
 }
 @media (max-width: 980px) {
   .hero-spacer {
@@ -26,11 +26,9 @@
   }
 }
 
-/* ----- HERO with side rails ----- */
+/* ----- HERO ----- */
 .hero {
   position: relative;
-  overflow: hidden;
-  border-bottom: 1px solid var(--border);
   background: var(--paper-3);
 }
 .hero__bg {
