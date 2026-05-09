@@ -11,7 +11,7 @@
 /* ----- HERO spacer blocks (deliberate empty whitespace zones) ----- */
 .hero-spacer {
   background: var(--paper-3);
-  height: 320px;
+  height: 160px;
 }
 .hero-spacer--top {
   border-bottom: 1px solid transparent;
@@ -22,7 +22,7 @@
 }
 @media (max-width: 980px) {
   .hero-spacer {
-    height: 200px;
+    height: 100px;
   }
 }
 
@@ -111,16 +111,16 @@
   display: grid;
   grid-template-columns: 1.05fr 0.95fr;
   gap: 80px;
-  padding-top: 720px;
-  padding-bottom: 800px;
+  padding-top: 360px;
+  padding-bottom: 400px;
   align-items: center;
 }
 @media (max-width: 980px) {
   .hero__inner {
     grid-template-columns: 1fr;
     gap: 56px;
-    padding-top: 440px;
-    padding-bottom: 520px;
+    padding-top: 220px;
+    padding-bottom: 260px;
   }
 }
 .hero__copy h1 {
