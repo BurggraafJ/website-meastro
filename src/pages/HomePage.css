@@ -93,16 +93,16 @@
   display: grid;
   grid-template-columns: 1.05fr 0.95fr;
   gap: 80px;
-  padding-top: 280px;
-  padding-bottom: 320px;
+  padding-top: 480px;
+  padding-bottom: 560px;
   align-items: center;
 }
 @media (max-width: 980px) {
   .hero__inner {
     grid-template-columns: 1fr;
     gap: 56px;
-    padding-top: 180px;
-    padding-bottom: 220px;
+    padding-top: 300px;
+    padding-bottom: 360px;
   }
 }
 .hero__copy h1 {
