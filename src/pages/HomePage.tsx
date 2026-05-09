@@ -43,7 +43,7 @@ export function HomePage() {
   const splashRef = useRef<HTMLDivElement>(null)
   const [splashVisible, setSplashVisible] = useState(false)
 
-  const runSplash = useCallback((_force: boolean) => {
+  const runSplash = useCallback(() => {
     const el = splashRef.current
     if (!el) return
 
@@ -68,12 +68,12 @@ export function HomePage() {
   }, [])
 
   useEffect(() => {
-    runSplash(false)
+    runSplash()
   }, [runSplash])
 
   const replayIntro = useCallback(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
-    window.setTimeout(() => runSplash(true), 350)
+    window.setTimeout(() => runSplash(), 350)
   }, [runSplash])
 
   /* --------------------------------------------------------------------- */
@@ -331,7 +331,9 @@ export function HomePage() {
         </div>
       </div>
 
-      {/* HERO */}
+      {/* HERO — empty spacer blocks above and below for breathing room */}
+      <div className="hero-spacer hero-spacer--top" aria-hidden="true" />
+
       <section className="hero" id="top">
         <div className="hero__bg" />
         <div className="hero__grid" />
@@ -504,6 +506,8 @@ export function HomePage() {
           </div>
         </div>
       </section>
+
+      <div className="hero-spacer hero-spacer--bottom" aria-hidden="true" />
 
       {/* STRIP */}
       <section className="strip">
