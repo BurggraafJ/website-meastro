@@ -29,7 +29,9 @@
 /* ----- HERO ----- */
 .hero {
   position: relative;
-  background: var(--paper-3);
+  /* transparent — the wrapper .hero-zone owns the background, gradient and grid
+     so they paint continuously across spacer-top + hero + spacer-bottom. */
+  background: transparent;
 }
 .hero__bg {
   position: absolute;
@@ -109,7 +111,7 @@
   display: grid;
   grid-template-columns: 1.05fr 0.95fr;
   gap: 80px;
-  padding-top: 280px;
+  padding-top: 200px;
   padding-bottom: 400px;
   align-items: center;
 }
@@ -117,7 +119,7 @@
   .hero__inner {
     grid-template-columns: 1fr;
     gap: 56px;
-    padding-top: 180px;
+    padding-top: 140px;
     padding-bottom: 260px;
   }
 }
