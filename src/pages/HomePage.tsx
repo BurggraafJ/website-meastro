@@ -332,8 +332,11 @@ export function HomePage() {
       </div>
 
       {/* HERO ZONE — top spacer + hero + bottom spacer share one wrapper so the
-          side rails and the bottom border run continuously across all three. */}
+          side rails, background gradient and grid pattern all run continuously. */}
       <section className="hero-zone">
+        <div className="hero__bg" />
+        <div className="hero__grid" />
+
         <div className="rail rail--l">
           <span className="rail__chip">
             <strong>134</strong>&nbsp;voorstellen vandaag
@@ -360,8 +363,6 @@ export function HomePage() {
         <div className="hero-spacer hero-spacer--top" aria-hidden="true" />
 
         <section className="hero" id="top">
-          <div className="hero__bg" />
-          <div className="hero__grid" />
 
         <div className="wrap hero__inner">
           <div className="hero__copy">

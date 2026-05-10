@@ -109,7 +109,7 @@
   display: grid;
   grid-template-columns: 1.05fr 0.95fr;
   gap: 80px;
-  padding-top: 360px;
+  padding-top: 280px;
   padding-bottom: 400px;
   align-items: center;
 }
@@ -117,7 +117,7 @@
   .hero__inner {
     grid-template-columns: 1fr;
     gap: 56px;
-    padding-top: 220px;
+    padding-top: 180px;
     padding-bottom: 260px;
   }
 }
